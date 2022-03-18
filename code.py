@@ -4,7 +4,7 @@ from IPython.display import Markdown, display
 def printmd(string):
     display(Markdown(string))
 import fontstyle
-tokens_pool = ['bf293230724ceaaa3786ed02432f35da6b4d53b0']
+tokens_pool = [*insert bitly token*]
 shortener = bitlyshortener.Shortener(tokens=tokens_pool, max_cache_size=256)
 bot = instaloader.Instaloader()
 
@@ -30,8 +30,8 @@ def preparespecificposts(username, index):
     print('link: ' , shortener.shorten_urls(long_urls))
     
 def preparesavedposts(index):
-    bot.login('ourbrewingstories', 'saveourcafesSG1997')
-    profile=instaloader.Profile.from_username(bot.context, 'ourbrewingstories')
+    bot.login(*insert username*, *insert password*)
+    profile=instaloader.Profile.from_username(bot.context, *insert username*)
     posts=profile.get_saved_posts()
     for postnumber, post in enumerate(posts,0):
         if postnumber<index:
